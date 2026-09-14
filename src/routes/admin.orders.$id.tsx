@@ -1,0 +1,3 @@
+import { createFileRoute } from "@tanstack/react-router";
+import { AdminOrderDetailPage } from "@/components/pages";
+export const Route = createFileRoute("/admin/orders/$id")({ head: () => ({ meta: [{ title: "Order Detail — Mom's Kitchen Admin" }, { name: "description", content: "Review and update a Mom's Kitchen order." }, { property: "og:title", content: "Order Detail — Mom's Kitchen Admin" }, { property: "og:description", content: "Review and update a Mom's Kitchen order." }, { property: "og:type", content: "website" }, { name: "twitter:card", content: "summary_large_image" }] }), component: AdminOrderDetailPage });

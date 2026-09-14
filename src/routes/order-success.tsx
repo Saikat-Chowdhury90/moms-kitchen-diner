@@ -1,0 +1,4 @@
+import { createFileRoute } from "@tanstack/react-router";
+import { CustomerLayout } from "@/components/layout";
+import { OrderSuccessPage } from "@/components/pages";
+export const Route = createFileRoute("/order-success")({ head: () => ({ meta: [{ title: "Order Confirmed — Mom's Kitchen" }, { name: "description", content: "Your Mom's Kitchen order has been placed successfully." }, { property: "og:title", content: "Order Confirmed — Mom's Kitchen" }, { property: "og:description", content: "Your Mom's Kitchen meal is on its way to the kitchen." }, { property: "og:type", content: "website" }, { name: "twitter:card", content: "summary_large_image" }] }), component: () => <CustomerLayout><OrderSuccessPage /></CustomerLayout> });

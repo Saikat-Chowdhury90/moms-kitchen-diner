@@ -59,6 +59,27 @@
   --color-sidebar-accent-foreground: var(--sidebar-accent-foreground);
   --color-sidebar-border: var(--sidebar-border);
   --color-sidebar-ring: var(--sidebar-ring);
+  --color-cream: var(--cream);
+  --color-cream-2: var(--cream-2);
+  --color-clay: var(--clay);
+  --color-clay-soft: var(--clay-soft);
+  --color-terra: var(--terra);
+  --color-terra-deep: var(--terra-deep);
+  --color-terra-soft: var(--terra-soft);
+  --color-sage: var(--sage);
+  --color-sage-soft: var(--sage-soft);
+  --color-amber: var(--amber);
+  --color-amber-soft: var(--amber-soft);
+  --color-ink: var(--ink);
+  --color-ink-soft: var(--ink-soft);
+  --color-line: var(--line);
+  --color-admin-background: var(--admin-background);
+  --color-admin-sidebar: var(--admin-sidebar);
+  --color-admin-surface: var(--admin-surface);
+  --color-admin-foreground: var(--admin-foreground);
+  --color-admin-muted: var(--admin-muted);
+  --color-admin-line: var(--admin-line);
+  --shadow-soft-clay: 0 12px 30px oklch(0.25 0.035 55 / 8%), 0 2px 8px oklch(0.25 0.035 55 / 5%);
 }
 
 :root {
@@ -95,6 +116,26 @@
   --sidebar-accent-foreground: oklch(0.208 0.042 265.755);
   --sidebar-border: oklch(0.929 0.013 255.508);
   --sidebar-ring: oklch(0.704 0.04 256.788);
+  --cream: oklch(0.985 0.018 88);
+  --cream-2: oklch(0.955 0.028 82);
+  --clay: oklch(0.87 0.075 58);
+  --clay-soft: oklch(0.93 0.045 72);
+  --terra: oklch(0.56 0.16 37);
+  --terra-deep: oklch(0.46 0.14 36);
+  --terra-soft: oklch(0.91 0.07 47);
+  --sage: oklch(0.47 0.09 145);
+  --sage-soft: oklch(0.89 0.055 145);
+  --amber: oklch(0.57 0.13 75);
+  --amber-soft: oklch(0.92 0.07 82);
+  --ink: oklch(0.24 0.035 55);
+  --ink-soft: oklch(0.44 0.035 55);
+  --line: oklch(0.84 0.04 70);
+  --admin-background: oklch(0.20 0.025 55);
+  --admin-sidebar: oklch(0.16 0.025 55);
+  --admin-surface: oklch(0.25 0.028 55);
+  --admin-foreground: oklch(0.96 0.018 88);
+  --admin-muted: oklch(0.72 0.025 70);
+  --admin-line: oklch(0.36 0.035 55);
 }
 
 .dark {
