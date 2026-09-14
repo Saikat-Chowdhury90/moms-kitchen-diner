@@ -1,0 +1,4 @@
+import { createFileRoute } from "@tanstack/react-router";
+import { CustomerLayout } from "@/components/layout";
+import { ProfilePage } from "@/components/pages";
+export const Route = createFileRoute("/profile")({ head: () => ({ meta: [{ title: "Your Profile — Mom's Kitchen" }, { name: "description", content: "Manage your Mom's Kitchen details and saved delivery addresses." }, { property: "og:title", content: "Your Profile — Mom's Kitchen" }, { property: "og:description", content: "Manage your details and saved delivery addresses." }, { property: "og:type", content: "website" }, { name: "twitter:card", content: "summary_large_image" }] }), component: () => <CustomerLayout><ProfilePage /></CustomerLayout> });

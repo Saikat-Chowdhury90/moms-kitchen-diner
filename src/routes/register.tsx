@@ -1,0 +1,4 @@
+import { createFileRoute } from "@tanstack/react-router";
+import { CustomerLayout } from "@/components/layout";
+import { AuthPage } from "@/components/pages";
+export const Route = createFileRoute("/register")({ head: () => ({ meta: [{ title: "Create an Account — Mom's Kitchen" }, { name: "description", content: "Create a Mom's Kitchen account for faster ordering and saved addresses." }, { property: "og:title", content: "Create an Account — Mom's Kitchen" }, { property: "og:description", content: "Save your details for faster ordering." }, { property: "og:type", content: "website" }, { name: "twitter:card", content: "summary_large_image" }] }), component: () => <CustomerLayout><AuthPage register /></CustomerLayout> });

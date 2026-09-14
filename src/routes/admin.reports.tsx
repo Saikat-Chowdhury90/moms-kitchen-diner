@@ -1,0 +1,4 @@
+import { createFileRoute } from "@tanstack/react-router";
+import { AdminLayout } from "@/components/layout";
+import { AdminReportsPage } from "@/components/pages";
+export const Route = createFileRoute("/admin/reports")({ head: () => ({ meta: [{ title: "Reports — Mom's Kitchen Admin" }, { name: "description", content: "Review Mom's Kitchen sales and menu performance." }, { property: "og:title", content: "Reports — Mom's Kitchen Admin" }, { property: "og:description", content: "Review sales and menu performance." }, { property: "og:type", content: "website" }, { name: "twitter:card", content: "summary_large_image" }] }), component: () => <AdminLayout><AdminReportsPage /></AdminLayout> });

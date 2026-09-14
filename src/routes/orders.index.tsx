@@ -1,0 +1,3 @@
+import { createFileRoute } from "@tanstack/react-router";
+import { OrdersPage } from "@/components/pages";
+export const Route = createFileRoute("/orders/")({ head: () => ({ meta: [{ title: "My Orders — Mom's Kitchen" }, { name: "description", content: "Track your current and previous Mom's Kitchen orders." }, { property: "og:title", content: "My Orders — Mom's Kitchen" }, { property: "og:description", content: "Track current and previous Mom's Kitchen orders." }, { property: "og:type", content: "website" }, { name: "twitter:card", content: "summary_large_image" }] }), component: OrdersPage });
