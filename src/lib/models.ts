@@ -85,7 +85,7 @@ export interface Order {
   total: number;
   paymentMethod: PaymentMethod;
   paymentStatus: PaymentStatus;
-  address?: Address;
+  address?: Address | undefined;
   customerNote?: string;
   createdAt: string;
 }
