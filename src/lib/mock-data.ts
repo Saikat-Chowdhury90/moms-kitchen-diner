@@ -11,6 +11,12 @@ export const demoUsers: User[] = [
   { id: "customer-sneha", name: "Sneha Patel", phone: "+91 98220 45678", email: "sneha.patel@example.com", role: "CUSTOMER" },
 ];
 
+const demoUser = (id: string): User => {
+  const user = demoUsers.find((entry) => entry.id === id);
+  if (!user) throw new Error(`Missing demo user: ${id}`);
+  return user;
+};
+
 export const demoAddresses: Address[] = [
   { id: "home", label: "Home", house: "24B", street: "Lake View Road", landmark: "Opposite City Park", city: "Kolkata", pinCode: "700029" },
   { id: "office", label: "Office", house: "3rd Floor, 18", street: "Camac Street", landmark: "Near Metro Gate 2", city: "Kolkata", pinCode: "700017" },
@@ -36,25 +42,26 @@ export const dailyMenu: DailyMenu = {
 };
 
 const orderItems = (items: Array<[string, number]>): Order["items"] => items.map(([menuItemId, quantity]) => {
-  const item = menuItems.find((entry) => entry.id === menuItemId) ?? menuItems[0];
+  const item = menuItems.find((entry) => entry.id === menuItemId);
+  if (!item) throw new Error(`Missing demo menu item: ${menuItemId}`);
   return { menuItemId, name: item.name, price: item.price, quantity, image: item.image };
 });
 
 export const demoOrders: Order[] = [
   {
-    id: "order-001", orderNumber: "ORD-20260912-001", customerId: "customer-rahul", customer: demoUsers[0],
+    id: "order-001", orderNumber: "ORD-20260912-001", customerId: "customer-rahul", customer: demoUser("customer-rahul"),
     items: orderItems([["chicken-biryani", 2], ["gulab-jamun", 2]]), orderType: "DELIVERY", status: "PREPARING", subtotal: 460, deliveryFee: 30, discount: 0, total: 490, paymentMethod: "COD", paymentStatus: "PENDING", address: demoAddresses[0], customerNote: "Less spicy, please", createdAt: "2026-09-12T11:42:00+05:30",
   },
   {
-    id: "order-002", orderNumber: "ORD-20260912-002", customerId: "customer-amit", customer: demoUsers[1],
+    id: "order-002", orderNumber: "ORD-20260912-002", customerId: "customer-amit", customer: demoUser("customer-amit"),
     items: orderItems([["paneer-thali", 1], ["roti", 4]]), orderType: "PICKUP", status: "READY", subtotal: 210, deliveryFee: 0, discount: 0, total: 210, paymentMethod: "ONLINE", paymentStatus: "PAID", createdAt: "2026-09-12T11:18:00+05:30",
   },
   {
-    id: "order-003", orderNumber: "ORD-20260912-003", customerId: "customer-priya", customer: demoUsers[2],
+    id: "order-003", orderNumber: "ORD-20260912-003", customerId: "customer-priya", customer: demoUser("customer-priya"),
     items: orderItems([["veg-biryani", 2], ["masala-chai", 2]]), orderType: "DELIVERY", status: "CONFIRMED", subtotal: 360, deliveryFee: 30, discount: 20, total: 370, paymentMethod: "COD", paymentStatus: "PENDING", address: demoAddresses[1], customerNote: "Call when you arrive", createdAt: "2026-09-12T10:58:00+05:30",
   },
   {
-    id: "order-004", orderNumber: "ORD-20260912-004", customerId: "customer-sneha", customer: demoUsers[3],
+    id: "order-004", orderNumber: "ORD-20260912-004", customerId: "customer-sneha", customer: demoUser("customer-sneha"),
     items: orderItems([["dal-fry", 1], ["rice", 1], ["roti", 2]]), orderType: "DELIVERY", status: "DELIVERED", subtotal: 180, deliveryFee: 30, discount: 0, total: 210, paymentMethod: "ONLINE", paymentStatus: "PAID", address: demoAddresses[0], createdAt: "2026-09-12T09:30:00+05:30",
   },
 ];
